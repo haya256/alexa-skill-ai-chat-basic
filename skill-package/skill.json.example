@@ -1,0 +1,33 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "ja-JP": {
+          "summary": "AIと会話できるスキルです",
+          "name": "AIチャット",
+          "description": "OpenAI互換APIを使ったAIチャットスキルです。何でも質問してください。",
+          "examplePhrases": [
+            "アレクサ、AIチャットを開いて",
+            "今日の天気はどうですか",
+            "おすすめのレシピを教えて"
+          ],
+          "keywords": [
+            "AI",
+            "チャット",
+            "会話"
+          ]
+        }
+      },
+      "isAvailableWorldwide": false,
+      "testingInstructions": "スキルを起動して質問してください",
+      "category": "KNOWLEDGE_AND_TRIVIA",
+      "distributionCountries": [
+        "JP"
+      ]
+    },
+    "apis": {
+      "custom": {}
+    },
+    "manifestVersion": "1.0"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "じんこうちのう",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "ChatIntent",
+          "slots": [
+            {
+              "name": "message",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "質問があります {message}",
+            "教えてください {message}",
+            "知りたいことがあります {message}",
+            "調べてください {message}"
+          ]
+        }
+      ],
+      "types": []
+    }
+  }
+}

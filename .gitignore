@@ -1,0 +1,21 @@
+# ASK CLI deployment state (contains AWS account ID, skill ID, etc.)
+.ask/ask-states.json
+
+# Skill manifest (auto-updated by ask deploy with Lambda ARN)
+skill-package/skill.json
+
+# Lambda build artifacts
+lambda/node_modules/
+lambda/dist/
+.ask/lambda/
+
+# Environment variables
+.env
+
+# macOS
+.DS_Store
+
+# Vim
+*.swp
+*.swo
+*~
