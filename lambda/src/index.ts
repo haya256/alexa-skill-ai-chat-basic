@@ -163,8 +163,7 @@ const ErrorHandler: Alexa.ErrorHandler = {
   },
 };
 
-// Lambdaハンドラーのエクスポート
-export const handler = Alexa.SkillBuilders.custom()
+const skill = Alexa.SkillBuilders.custom()
   .addRequestHandlers(
     LaunchRequestHandler,
     ChatIntentHandler,
@@ -174,4 +173,11 @@ export const handler = Alexa.SkillBuilders.custom()
     SessionEndedRequestHandler
   )
   .addErrorHandlers(ErrorHandler)
-  .lambda();
+  .create();
+
+// Lambdaハンドラーのエクスポート
+// Node.js 24以降のLambdaはコールバック形式（.lambda()）に対応しないため、async関数で返す
+export const handler = async (
+  event: Parameters<typeof skill.invoke>[0],
+  context?: unknown
+) => skill.invoke(event, context);
