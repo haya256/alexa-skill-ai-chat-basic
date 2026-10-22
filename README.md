@@ -15,10 +15,17 @@ alexa-skill-ai-chat-basic/
 │   ├── interactionModels/
 │   │   └── custom/
 │   │       └── ja-JP.json           # 日本語の発話モデル
-│   └── skill.json                   # スキルマニフェスト
+│   ├── skill.json                   # スキルマニフェスト（Git管理外）
+│   └── skill.json.example           # スキルマニフェストのテンプレート
+├── ask-resources.json               # ASK CLIのデプロイ設定
 ├── .env.example                     # 環境変数のサンプル
 └── README.md
 ```
+
+## 必要なもの
+
+- Node.js 24（Lambdaのランタイム `nodejs24.x` に合わせています）
+- [ASK CLI](https://developer.amazon.com/ja-JP/docs/alexa/smapi/quick-start-alexa-skills-kit-command-line-interface.html)（デプロイに使います）
 
 ## セットアップ
 
@@ -38,13 +45,13 @@ cd lambda
 npm install
 ```
 
-### 2. ビルド
+### 3. ビルド
 
 ```bash
 npm run build
 ```
 
-### 3. 環境変数の設定
+### 4. 環境変数の設定
 
 Lambda関数に以下の環境変数を設定してください：
 
@@ -56,6 +63,7 @@ Lambda関数に以下の環境変数を設定してください：
 
 ## 使い方
 
-- 「アレクサ、AIチャットを開いて」で起動
-- 起動後は自由に質問できます
+- 「アレクサ、じんこうちのうを開いて」で起動
+- 起動後は「質問があります」に続けて質問します（例：「質問があります 富士山の高さは」）
+  - 「教えてください」「知りたいことがあります」「調べてください」でも質問できます
 - 「ストップ」または「キャンセル」で終了
